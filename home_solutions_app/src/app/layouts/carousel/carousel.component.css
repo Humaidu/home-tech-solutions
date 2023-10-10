@@ -1,0 +1,27 @@
+
+
+carousel{
+    text-align: center;
+}
+slide img{
+    height: 600px;
+    min-width: 83%;
+}
+
+.carousel-caption h3{
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--footer-color);
+  opacity: 80%;
+
+}
+
+
+@media screen and (max-width:480px){
+  .carousel-caption h3{
+        font-size: 25px;
+        font-weight: 500;
+    }
+  
+}

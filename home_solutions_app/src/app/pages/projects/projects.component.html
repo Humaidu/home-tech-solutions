@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 header">
+      <h2>APPLIANCES WE REPAIR</h2>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="gallery-container mt-3 mb-5">
+        <div
+          *ngFor="let image of images; let i = index"
+          class="gallery-item text-center "
+        >
+          <img
+            src="{{ image.src }}"
+            style="height: 300px; width: 550px;"
+            class="image-fluid g-image"
+            alt="Image {{ i + 1 }}"
+          />
+          <div class="caption text-center txt-info mt-5"><span class="project">Brand: </span>{{ image.brand }}</div>
+          <!-- <div class="caption text-center txt-info mt-2"><span class="location">Location: </span>{{ image.location }}</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+
+</div>

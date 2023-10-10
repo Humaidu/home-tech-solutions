@@ -1,0 +1,222 @@
+<app-carousel></app-carousel>
+<div class="main">
+  <!-- services section-->
+  <div class="services" id="services">
+    <div class="row">
+      <h2 class="section-heading">Our Services</h2>
+    </div>
+    <div class="row crds">
+      <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="assets/h.jpeg" class="card-img-top" alt="pool planning" />
+          </div>
+          <h3>We repair and service home appliances</h3>
+          <p>
+            We repair and service washing machine, dish washer, electric oven,
+            microwave, dryer, refrigerators, vacuum cleaner, air conditioner and
+            other appliances
+          </p>
+        </div>
+      </div>
+      <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img
+              src="assets/wm2.jpg"
+              class="card-img-top"
+              alt="pool construction"
+            />
+          </div>
+          <h3>We do pick up and delivery services</h3>
+          <p>
+            We pick up the machine from the customer's place for repair and
+            deliver it back.
+          </p>
+        </div>
+      </div>
+      <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="assets/a.jpeg" class="card-img-top" alt="pool planning" />
+          </div>
+          <h3>We repair different brands of appliances</h3>
+          <p>
+            Bosch, LG, Samsung, Siemens, Whirlpool, Hitachi, Ariston, Bompani,
+            Hotpoint, Candy and Hoover
+          </p>
+        </div>
+      </div>
+      <!-- <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img
+              src="assets/build_const.jpeg"
+              class="card-img-top"
+              alt="building construction"
+            />
+          </div>
+          <h3>Building Construction</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img
+              src="assets/build_plan.jpeg"
+              class="card-img-top"
+              alt="build planning"
+            />
+          </div>
+          <h3>Building Planning</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div>
+      <div class="column crd fade-in">
+        <div class="card">
+          <div class="image-wrapper">
+            <img
+              src="assets/land.jpeg"
+              class="card-img-top"
+              alt="land surveying"
+            />
+          </div>
+          <h3>Land Surveying</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            consequatur necessitatibus eaque.
+          </p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="project"></div>
+
+  <!-- About Section -->
+  <div class="about animate" id="about_us">
+    <div class="info">
+      <h2 class="fade-in">About Us</h2>
+      <p class="slide-in left">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis,
+        doloremque? Quam rem unde provident, iste qui doloribus. Itaque,
+        deserunt, beatae recusandae ipsum maxime nemo quasi ut corporis officiis
+        suscipit eveniet! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Tenetur modi fuga ex cupiditate dolorum. Vel eos, nihil inventore
+        tenetur minus rem earum quam labore accusantium explicabo! Enim ratione
+        omnis consectetur.
+      </p>
+    </div>
+    <div class="image slide-in right">
+      <img
+        src="assets/electric.jpg"
+        class="img-fluid"
+        alt="about"
+        style="height: 400px; width: 500px"
+      />
+    </div>
+  </div>
+
+  <!-- choose us section -->
+  <div class="choose animate" id="choose_us">
+    <div class="image slide-in left">
+      <img
+        src="assets/lg.jpg"
+        class="img-fluid"
+        alt="about"
+        style="height: 400px; width: 500px"
+      />
+    </div>
+    <div class="info">
+      <div class="header fade-in">
+        <h2>WHY CHOOSE US?</h2>
+      </div>
+      <div class="slide-in right">
+        <div
+          class="toggle-header"
+          *ngFor="let item of accordionItems; let i = index"
+          (click)="toggleContent(i)"
+        >
+          <h5>{{ item.headerText }}</h5>
+          <span
+            class="arrow-icon"
+            [ngClass]="{ up: item.isExpanded, down: !item.isExpanded }"
+          ></span>
+        </div>
+        <div *ngFor="let item of accordionItems; let i = index">
+          <div class="toggle-content" [class.show]="item.isExpanded">
+            <p>
+              {{ item.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mission section -->
+  <div class="mission animate">
+    <div class="header fade-in">
+      <h2>We guarantee you premium repair service for every home appliance</h2>
+    </div>
+    <div class="row statement">
+      <div class="col-md-4 col-sm-4 slide-in left">
+        <h1>01. MISSION</h1>
+        <p>
+          Partner actively with our customers to provide genuinely and suitable
+          technical solutions to help them maintain performance, reduce cost and
+          minimize risk.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-4 fade-in">
+        <h1>02. VISSION</h1>
+        <p>To be the most value and first option for all our customers.</p>
+      </div>
+
+      <div class="col-md-4 col-sm-4 slide-in right">
+        <h1>03. VALUE</h1>
+        <p>
+          Quality craftsmanship, Transparent communication, Timely solutions,
+          Customer-centric approach, Affordability and Reliability.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="contact" id="contact">
+    <div class="container">
+      <div class="img slide-in left">
+        <img src="assets/subs.svg" alt="subscribe" />
+      </div>
+      <div class="body_txt">
+        <div class="slide-in right">
+          <h1>GET IN TOUCH</h1>
+          <h5>
+            Message us on Whatsapp
+            <span
+              class="fa fa-brands fa-whatsapp"
+              style="color: var(--primary-color)"
+            ></span>
+          </h5>
+        </div>
+        <div class="subs mt-2">
+          <a
+            href="https://api.whatsapp.com/send?phone=233504469244"
+            target="_blank"
+          >
+            <button class="mt-2">Go to Whatsapp</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

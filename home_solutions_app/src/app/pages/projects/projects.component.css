@@ -1,0 +1,49 @@
+.container {
+  padding: 20px 50px 20px 50px;
+  height: auto;
+}
+.container h2 {
+  color: var(--primary-color);
+  font-size: 35px;
+  position: fixed;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 100px;
+  left: -10px;
+
+}
+.g-image {
+  transition: transform 0.2s;
+}
+
+.g-image:hover {
+  transform: scale(1.35);
+}
+
+.gallery-item{
+  margin-bottom: 100px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+.txt-info{
+  font-size: 23px;
+  color: #333;
+}
+
+.project, .location{
+  font-size: 24px;
+  font-weight: bolder;
+
+}
+
+
+@media screen and (max-width: 480px) {
+ 
+ 
+}
