@@ -125,7 +125,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 60vh;
+    min-height: auto;
     text-align: left;
   }
 
@@ -148,8 +148,8 @@
     flex-direction: column;
     align-items: center;
     min-height: auto;
-    margin: 10px;
-    padding-bottom: 50px;
+    margin: 5px;
+    /* margin-bottom: 10px; */
     text-align: left;
   }
 
@@ -309,8 +309,9 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  .services {
-    min-height: 380vh;
+  .section-heading {
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }
 

@@ -179,3 +179,10 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 468px) {
+   .navbar-container h1{
+    font-size: 20px;
+    font-weight: 600;
+   } 
+}

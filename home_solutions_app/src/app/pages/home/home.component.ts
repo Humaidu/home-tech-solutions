@@ -18,32 +18,27 @@ export class HomeComponent implements OnInit {
   accordionItems = [
     {
       headerText: 'Affordable prices',
-      content:
-        'Our prices are very affordable.',
+      content: 'Our prices are very affordable.',
       isExpanded: false,
     },
     {
       headerText: '1 year warranty for any parts replaced',
-      content:
-        'We give 1 year warranty for any appliance parts we replaced.',
+      content: 'We give 1 year warranty for any appliance parts we replaced.',
       isExpanded: false,
     },
     {
       headerText: 'Same day delivery',
-      content:
-        'We deliver appliances to customers on the same day.',
+      content: 'We deliver appliances to customers on the same day.',
       isExpanded: false,
     },
     {
       headerText: 'Best Customer Service',
-      content:
-        'You wont regret choosing to work with us.',
+      content: 'You wont regret choosing to work with us.',
       isExpanded: false,
     },
     {
       headerText: 'Safe handling of appliances',
-      content:
-        'We handle all appliances with care.',
+      content: 'We handle all appliances with care.',
       isExpanded: false,
     },
     {
@@ -55,7 +50,11 @@ export class HomeComponent implements OnInit {
     // Add more items as needed
   ];
 
-  constructor(private fb: FormBuilder, private apiService: ApiService, private elementRef: ElementRef) {}
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private elementRef: ElementRef
+  ) {}
 
   toggleContent(index: number) {
     this.accordionItems.forEach((item, i) => {
@@ -67,24 +66,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // messageForm = this.fb.group({
-  //   fullName: ['', Validators.required],
-  //   phoneNumber: [
-  //     '',
-  //     [
-  //       Validators.required,
-  //       Validators.pattern('^[0-9]*$'),
-  //       Validators.minLength(10),
-  //       Validators.maxLength(15),
-  //     ],
-  //   ],
-  //   message: ['', Validators.required],
-  // });
-
-  // get getFormControl() {
-  //   return this.messageForm.controls;
-  // }
-
   ngOnInit(): void {
     const faders = document.querySelectorAll('.fade-in')!;
     const sliders = document.querySelectorAll('.slide-in')!;
@@ -92,52 +73,25 @@ export class HomeComponent implements OnInit {
     const options = {
       root: null,
       threshold: 0,
-      rootMargin: '0px 0px -250px 0px'
-    }
+      rootMargin: '0px 0px -250px 0px',
+    };
     const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => { 
-        if (!entry.isIntersecting){
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
           return;
-        }else{
-          entry.target.classList.add("appear");
+        } else {
+          entry.target.classList.add('appear');
           observer.unobserve(entry.target);
-
         }
-      })
+      });
     }, options);
 
     faders.forEach((fade) => {
-      observer.observe(fade)
-    })
+      observer.observe(fade);
+    });
 
     sliders.forEach((slider) => {
       observer.observe(slider);
     });
-    
   }
-
-  // onSubmit() {
-  //   this.fullname = this.messageForm.value.fullName!;
-  //   this.phone = this.messageForm.value.phoneNumber!;
-  //   this.message = `${this.messageForm.value.message!}\n${this.fullname}\n${
-  //     this.phone
-  //   }`;
-  //   const mesageData: MessageData = {
-  //     sender: 'superHome',
-  //     message: this.message,
-  //     phone_numbers: ['233554896353'],
-  //   };
-  //   console.log(this.message);
-
-  //   this.apiService.sendMessage(mesageData).subscribe(
-  //     (response) => {
-  //       console.log('Message sent ', response);
-  //     },
-  //     (error) => {
-  //       console.error('Error:', error);
-  //     }
-  //   );
-
-  //   this.messageForm.reset();
-  // }
 }
